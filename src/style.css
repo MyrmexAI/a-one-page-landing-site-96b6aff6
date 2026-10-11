@@ -1,0 +1,209 @@
+:root {
+  --cream: #f6efe4;
+  --sand: #ead9bf;
+  --espresso: #3b2418;
+  --roast: #6b3f26;
+  --amber: #b9722f;
+  --amber-dark: #8f531c;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--espresso);
+  font-family: var(--sans);
+  line-height: 1.6;
+}
+
+h1, h2, h3, .brand {
+  font-family: var(--serif);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+a { color: var(--amber-dark); }
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding: 1rem clamp(1rem, 5vw, 3rem);
+  background: var(--espresso);
+}
+
+.brand {
+  color: var(--cream);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.site-header nav { display: flex; gap: 1.25rem; }
+
+.site-header nav a {
+  color: var(--sand);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus-visible { color: #fff; text-decoration: underline; }
+
+.hero {
+  background: linear-gradient(160deg, var(--roast) 0%, var(--espresso) 100%);
+  color: var(--cream);
+  padding: clamp(3.5rem, 12vw, 8rem) clamp(1rem, 5vw, 3rem);
+}
+
+.hero-inner { max-width: 44rem; margin: 0 auto; }
+
+.eyebrow {
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.8rem;
+  color: var(--sand);
+}
+
+.hero h1 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.25rem, 7vw, 4rem);
+}
+
+.lead {
+  margin: 0 0 2rem;
+  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+  color: var(--sand);
+}
+
+.button {
+  display: inline-block;
+  padding: 0.85rem 1.75rem;
+  background: var(--amber);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: background 0.15s;
+}
+
+.button:hover,
+.button:focus-visible { background: var(--amber-dark); }
+
+.section {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 8vw, 5rem) clamp(1rem, 5vw, 3rem);
+}
+
+.section h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+}
+
+.section-intro { margin: 0 0 2rem; color: var(--roast); }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fffaf2;
+  border: 1px solid var(--sand);
+  border-top: 4px solid var(--amber);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-origin {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--amber-dark);
+}
+
+.card h3 { margin: 0 0 0.75rem; font-size: 1.6rem; }
+
+.notes { margin: 0 0 1.25rem; flex: 1; }
+
+.price {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.price span {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--roast);
+}
+
+.about {
+  max-width: 44rem;
+  text-align: left;
+}
+
+.about p { font-size: 1.1rem; }
+
+.visit {
+  max-width: none;
+  background: var(--sand);
+}
+
+.visit > * { max-width: 56rem; margin-left: auto; margin-right: auto; }
+
+.visit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2rem;
+}
+
+.visit h3 { margin: 0 0 0.75rem; font-size: 1.3rem; }
+
+.hours { list-style: none; margin: 0; padding: 0; }
+
+.hours li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(59, 36, 24, 0.2);
+}
+
+address { font-style: normal; }
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding: 1.5rem clamp(1rem, 5vw, 3rem);
+  background: var(--espresso);
+  color: var(--sand);
+  font-size: 0.9rem;
+}
+
+.site-footer p { margin: 0; }
+.site-footer a { color: var(--cream); }
+
+:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button { transition: none; }
+}

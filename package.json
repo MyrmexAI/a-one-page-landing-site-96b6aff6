@@ -1,0 +1,9 @@
+{
+  "name": "hive-coffee",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page for Hive Coffee, Ljubljana. Plain HTML/CSS.",
+  "scripts": {
+    "build": "rm -rf dist && mkdir -p dist && cp -r src/. dist/"
+  }
+}
